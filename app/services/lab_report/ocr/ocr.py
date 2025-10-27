@@ -34,7 +34,15 @@ class OCR:
         
         try:
             logger.info("OCR Model Initializing For PDF to Text..........")
-            self.model = ocr_predictor(det_arch=self.detection_model,reco_arch=self.recognize_model,pretrained=True)
+            self.model = ocr_predictor(det_arch=self.detection_model,
+                                        reco_arch=self.recognize_model,
+                                        pretrained=True,
+                                        detect_orientation=True,
+                                        assume_straight_pages=False,
+                                        disable_crop_orientation=False,
+                                        disable_page_orientation=False,
+                                        straighten_pages=True)
+            
             self.pdf = DocumentFile.from_pdf(pdf_file)
             self.result = self.model(self.pdf)
             self.result = self.result.export()
@@ -49,7 +57,15 @@ class OCR:
     def img_to_text(self, img_file) -> str:     
         try:
             logger.info("OCR Model Initializing For Img to Text..........")
-            self.model = ocr_predictor(det_arch=self.detection_model,reco_arch=self.recognize_model,pretrained=True)
+            self.model = ocr_predictor(det_arch=self.detection_model,
+                                        reco_arch=self.recognize_model,
+                                        pretrained=True,
+                                        detect_orientation=True,
+                                        assume_straight_pages=False,
+                                        disable_crop_orientation=False,
+                                        disable_page_orientation=False,
+                                        straighten_pages=True)
+            
             self.img = DocumentFile.from_images(img_file)
             self.result = self.model(self.img)
             self.result = self.result.export()
