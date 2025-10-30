@@ -9,3 +9,6 @@ python-doctr
 pydantic
 python-multipart
 cloudinary 
+gunicorn
+pytest
+pytest-asyncio

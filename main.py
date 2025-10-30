@@ -20,5 +20,10 @@ app.include_router(lab_report.router)
 app.include_router(meal_scaner.router)
 
 
+@app.get("/")
+async def root():
+    return {"messages" : "Suraj AI API documentation"}
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
