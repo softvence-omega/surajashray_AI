@@ -13,3 +13,4 @@ logs/
 temp_data/
 notebook/
 uv.lock
+.pytest_cache

@@ -19,3 +19,5 @@ logs/
 # custom folder
 venv/
 notebook/
+.venv
+.pytest_cache

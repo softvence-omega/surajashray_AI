@@ -37,3 +37,15 @@ jobs:
               run: |
                 pytest -v --maxfail=1 --disable-warnings
             
+        # 4. login to docker
+            - name: Login to docker
+              uses: docker/login-action@v3
+              with:
+                username: ${{vars.DOCKERHUB_USERNAME}}
+                password: ${{secrets.DOCKERHUB_TOKEN}}
+
+        # 5. build and push to docker
+            - name: Build and push to docker
+              run: |
+                docker compose build
+                docker compose push
