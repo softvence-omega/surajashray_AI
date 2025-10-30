@@ -1,7 +1,6 @@
 langchain
 langchain_core
 langchain_openai
-langchain_anthropic
 langgraph
 dotenv
 uvicorn
@@ -10,4 +9,3 @@ python-doctr
 pydantic
 python-multipart
 cloudinary 
-opencv-python-headless

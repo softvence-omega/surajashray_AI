@@ -1,0 +1,16 @@
+name: Suraj AI CI/CD
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    build:
+        runs-on: ubuntu:latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5.0.0
+            
