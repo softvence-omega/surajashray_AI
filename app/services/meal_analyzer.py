@@ -4,7 +4,7 @@ from ..schemas.mealstate import MealState
 from ..schemas.meal_evaluation import Evaluation
 from ..config import base_model
 
-# ------------------- Meal Analyzer ------------------- #
+# ------------------- Meal Analyzer ------------------ #
 try:
     from app.config import base_model  # your structured model
 except ImportError:
