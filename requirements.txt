@@ -12,3 +12,11 @@ cloudinary
 gunicorn
 pytest
 pytest-asyncio
+openai>=1.42.0
+pinecone
+python-dotenv
+numpy
+pandas
+PyYAML
+requests
+httpx

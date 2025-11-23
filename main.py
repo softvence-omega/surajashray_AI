@@ -3,6 +3,7 @@ import uvicorn
 from app.api.v1.endpoints import lab_report
 from app.api.v1.endpoints import meal_scaner
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.v1.endpoints import wellness_chat
 
 app = FastAPI()
 
@@ -18,7 +19,11 @@ app.add_middleware(
 # Router Include
 app.include_router(lab_report.router)
 app.include_router(meal_scaner.router)
-
+app.include_router(
+    wellness_chat.router,
+    prefix="/api/v1/wellness",
+    tags=["Wellness Chat"]
+)
 
 @app.get("/")
 async def root():
