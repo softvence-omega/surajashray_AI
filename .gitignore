@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv
+.env
+logs/
+temp_data/
+notebook/
+uv.lock
+.pytest_cache
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
